@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/global/BackgroundSection"
+import Info from "../components/home/Info"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => (
       img={data.img.childImageSharp.fluid}
       title="Coffee Shop"
     />
+    <Info />
   </Layout>
 )
 
