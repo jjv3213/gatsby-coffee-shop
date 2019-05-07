@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Navbar from "./global/Navbar"
+import Footer from "./global/Footer"
 
 import "./bootstrap.min.css"
 import "./layout.css"
@@ -17,6 +18,7 @@ const Layout = ({ children }) => (
   <>
     <Navbar />
     {children}
+    <Footer />
   </>
 )
 

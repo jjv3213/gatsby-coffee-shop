@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Title from "../global/Tttle"
+import Title from "./Tttle"
 
-const Info = () => {
+const Info = ({ title, btnText, link }) => {
   return (
     <section className="py-5">
       <div className="container">
-        <Title title="Our Story" />
+        <Title title={title} />
         <div className="row">
           <div className="col-10 col-sm-8 mx-auto text-center">
             <p className="lead text-muted mb-5">
@@ -19,9 +19,9 @@ const Info = () => {
               ratione deleniti, quibusdam nemo? Cumque porro quibusdam nesciunt
               modi nulla incidunt.
             </p>
-            <Link to="/about/">
+            <Link to={link}>
               <button className="btn text-uppercase btn-yellow">
-                about page
+                {btnText}
               </button>
             </Link>
           </div>

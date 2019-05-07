@@ -2,24 +2,23 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import BackgroundSection from "../components/global/BackgroundSection"
 import Info from "../components/global/Info"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="Coffee Shop"
+      title="About Us"
+      styleClass="about-background"
     />
-    <Info title="Our Story" btnText="About Page" link="/about" />
+    <Info title="Who we are" btnText="Home Page" link="/" />
   </Layout>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(relativePath: { eq: "about-background.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -29,4 +28,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default AboutPage
