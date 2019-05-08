@@ -6,7 +6,7 @@ import { FaCartArrowDown } from "react-icons/fa"
 const Navbar = () => {
   const [navbarOpen, setnavbarOpen] = useState(false)
   const [navbarEffect, setnavbarEffect] = useState("collapse navbar-collapse")
-  const [links, setlinks] = useState([
+  const links = [
     {
       id: 1,
       path: "/",
@@ -17,7 +17,7 @@ const Navbar = () => {
       path: "/about",
       text: "About",
     },
-  ])
+  ]
 
   const navbarHandler = () => {
     setnavbarOpen(!navbarOpen)
